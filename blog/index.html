@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Home</title>
+    <script src="./js/jquery-3.3.1.js"></script>
+    
+</head>
+
+<body>
+    <div class="cover">
+        <header>
+            <div id="blog-name">Blog-name</div>
+            <img class="ico" src="./img/musica-searcher.png">
+        </header>
+        <div id="bd-contents">
+            <div class="wrapper" id="wrapper">
+            </div>
+        </div>
+        <footer>
+            <div id="footer-contents">
+                Made with Jekyll and by 대희 ㅎ
+            </div>
+        </footer>
+    </div>
+
+    <script>
+            var postlist = [{
+                    index: 1,
+                    date: "2019년 01월 26일",
+                    title: "댜희의 시크릿",
+                    content: "후수",
+                    tagList: [
+                        "대희", "시크릿", "1"
+                    ],
+                    color: "green"
+                },
+                {
+                    index: 2,
+                    date: "2019년 01월 26일",
+                    title: "댜희의 시크릿",
+                    content: "후수",
+                    tagList: [
+                        "대희", "시크릿", "1"
+                    ],
+                    color: "black"
+                },
+                {
+                    index: 3,
+                    date: "2019년 01월 26일",
+                    title: "댜희의 시크릿",
+                    content: "후수",
+                    tagList: [
+                        "대희", "시크릿", "1"
+                    ],
+                    color: "blue"
+                },
+                {
+                    index: 4,
+                    date: "2019년 01월 26일",
+                    title: "댜희의 시크릿",
+                    content: "후수",
+                    tagList: [
+                        "대희", "시크릿", "1"
+                    ],
+                    color: "orange"
+                },
+                {
+                    index: 5,
+                    date: "2019년 01월 26일",
+                    title: "윤찬명의 시크릿",
+                    content: "후수",
+                    tagList: [
+                        "대희", "시크릿", "1"
+                    ],
+                    color: "red"
+                }
+            ];
+            let html = "";
+    
+            postlist.forEach(function (el, index) {
+                html +=
+                    `<div class="contents ${el.color}">
+                        <div class="date">${el.date}</div>
+                        <div class="title">${el.title}</div>
+                        <div class="content">${el.content}</div>
+                        <div class="tag-cover">`
+                el.tagList.forEach(function(subel, idx){
+                    html += `<div class="tag">${subel}</div>`
+                })          
+                html += `</div>
+                    </div>`
+            })
+    
+            $("#wrapper").html(html)
+    
+    
+            console.log(html)
+        </script>
+</body>
+
+</html>
